@@ -1,0 +1,79 @@
+.wrapper {
+  width: 80%;
+  margin: auto;
+  min-width: 600px;
+  max-width: 1500px;
+  border-collapse: collapse;
+  overflow: hidden;
+  text-align: center;
+}
+
+span{
+    font-weight: bold;
+}
+
+th {
+  background: hsl(200, 100%, 10%);
+  color: hsl(200, 100%, 100%);
+  border: 1px solid hsl(200, 100%, 10%);
+  font-size: 20px;
+}
+
+caption{
+    background-color: hsl(195,100%,100%);
+    font-size:20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+td {
+    position: relative;
+    border: 1px solid hsl(200, 100%, 10%);
+    height: 100px;
+    width: 100px;
+}
+
+tr:nth-child(odd) td:first-child::before {
+    content: "";
+    position: absolute;
+    background-color: hsl(175, 50%, 50%);
+    top: 0;
+    left: -5000px;
+    width: 10000px;
+    height: 100%;
+    z-index: -2;
+}
+
+tr:nth-child(even) td:first-child::before {
+    content: "";
+    position: absolute;
+    background-color: hsl(175, 10%, 90%);
+    top: 0;
+    left: -5000px;
+    width: 10000px;
+    height: 100%;
+    z-index: -2;
+}
+
+td, th {
+	position: relative;
+}
+
+tr:hover {
+    padding: 10px;
+    background-color: hsl(175, 43%, 33%);
+}
+
+td:hover::after,
+th:hover::after{
+    content: "";
+    position: absolute;
+    background-color: hsl(175, 43%, 33%);
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
+}
+
+
